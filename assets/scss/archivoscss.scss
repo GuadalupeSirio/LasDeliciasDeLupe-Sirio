@@ -1,0 +1,331 @@
+@mixin sizes($width,$height){
+    height: $height;
+    width: $width;
+}
+
+.Body__Index{
+    background-image: url("https://cdn.pixabay.com/photo/2015/06/24/01/15/morning-819362_960_720.jpg");
+    background-size: cover;
+    background-position:center;
+    @include sizes(100vw,100vh);
+}
+.Body__General{
+    margin:0;
+    padding: 0;
+    background-image: url("../../img/Fondo\ BodyGeneral.jpg");
+    @include sizes(500px,500px);
+}
+@media only screen and (min-width: 768px){
+     .Body__General{
+         margin: 0;
+         padding: 0;
+         background-image: url("../../img/Fondo\ BodyGeneral.jpg");
+         @include sizes(100vw,100vh);
+     }
+}
+.header__img{
+    display: flex;
+    position: absolute;
+    top: 25vh;
+    left: 35vw;   
+}
+@media(max-width:768px){
+    .header__img{
+        display: flex;
+        position: absolute;
+        top: 37vh;
+        left: 10vw;   
+    }
+}
+.carousel-item{
+    @include sizes(400px,400px);
+}
+@media(min-width:768px){
+    .carousel-item{
+        @include sizes(400px,400px);
+    }
+   
+}
+.header__general{
+    display: flex;
+    height: 30vh;
+    
+}
+.no-gutters{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.header__logo{
+    @include sizes(100px,100px);
+}
+/*.navbar{
+    background-color: black;
+    padding: 1rem 2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+    
+}*/
+.nav-link{
+    color: white;
+}
+/*.nav-item:hover {
+    background-color: white;
+    color: black !important;
+    border-radius: 2rem;
+}*/
+.block__texto{
+    font-weight: bold;
+    font-style: italic;
+}
+.block__texto1{
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+}
+.block__text1{
+    color: rgb(253, 167, 8);
+    @extend.block__texto;
+    font-size: 200%;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: normal;
+}
+.block__text2{
+    color: rgb(68, 64, 64);
+   @extend.block__texto1;
+}
+.block__text3{
+    color: rgb(61, 35, 4);
+    @extend.block__texto1;
+    font-size: large;
+    text-align: justify;
+    
+}
+.block__text4{
+    text-decoration: none;
+    font-size: medium;
+    @extend.block__texto;
+    color: rgb(61, 35, 4);
+    text-align: center;
+}
+
+.estilo-form{
+    border: 2px solid black;
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+}
+#formulario{
+    float: left;
+    @include sizes(100%,420px);
+}
+
+@media only screen and (min-width: 768px){
+    .estilo-form{
+        width: fit-content;
+    }
+}
+
+.ol li{
+    list-style-type: upper-roman;
+    color: rgb(25, 25, 114);
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    @include sizes(100%,15vh);
+    margin: 0;
+    padding-left: 0;
+    background-color: rgb(44, 40, 30);
+    align-items: center;
+    list-style: none;
+    li a{
+        list-style: none;
+    text-decoration: none;
+    color: rgb(197, 143, 7);
+    font-size: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    }
+}
+
+ul ul{
+    position: absolute;
+    display: none;
+    li{
+        display: block;
+        color:  rgb(197, 143, 7);
+        text-decoration: none;
+        font-size: 10px; 
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    li:hover{
+        display: block;
+    }
+}    
+    /*FOOTER*/
+ #footer__grad{
+        display: grid;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        background-image: linear-gradient(to right,black,rgb(180, 178, 178));
+        @include sizes(500px,120px);
+        align-items: center;
+        color: rgb(275, 179, 23);
+        font-size: 20px;
+        
+ }
+ /*
+ @media only screen and (min-width: 768px){
+     .gradfooter{
+        display: grid;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-image: linear-gradient(to right,black,rgb(180, 178, 178));
+        height: 140px;
+        align-items: center;
+        color: rgb(275, 179, 23);
+        font-size: 10px;
+     }
+ }*/
+
+ .footer__logoI{
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    right: 460px;
+}
+.footer__logoW{
+   display: flex;
+   position: absolute;
+   bottom: 5px;
+   right: 520px;
+}
+.footer__logoF{
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    right: 590px;
+}
+
+.col-12{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+
+    /*  BOTONES FORMULARIO  */
+.input:focus{
+      background-color: rgb(275, 179, 23);
+}
+
+
+
+
+
+
+/*ESTILO                    PAGINA                  3*/
+.adicionales{
+    display: grid;
+    height: 90vh;
+    grid-template-columns: 40% 5% 55%;
+    grid-template-rows: repeat (6, 500px);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    justify-items: center;
+    align-items: center;
+ }
+
+ .descripcion{
+     grid-column: 1/2;
+     list-style-type: upper-roman;
+     color: rgb(25, 25, 114);
+     font-family: 'Comfortaa', cursive;
+     font-weight: bold;
+
+     
+ }
+ .imagen{
+     grid-column: 3/4;
+     @include sizes(30px,30px);
+     animation-name: imagen;
+     animation-duration: 2s;
+         
+ }
+ 
+ #checkbox{
+    grid-column: 2/3;
+ }
+
+ #comentario{
+     display:grid;
+     bottom: 10%;
+     left: 5%;
+ }
+
+
+  @keyframes imagen{
+   from{
+     @include sizes(30px,30px);
+     }
+   to{
+     @include sizes(100px,100px);
+   }
+}
+
+ /*Tabla pagina productos*/
+ .main{
+    display: grid;
+    font-family: sans-serif;
+    height: 100vh;
+    grid-gap: 10px;
+    grid-template-areas: "Productos Contenido INutricional"
+                         "TipoP ContenidoP InformacionP"
+                         ;
+}
+main > *{
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aside{
+    grid-area: Productos;
+    background-color: orange;
+    
+}
+.article{
+    grid-area: Contenido;
+    background-color: orange;
+}
+.aside1{
+    grid-area: INutricional;
+    background-color: orange;
+}
+.section1{
+    grid-area: TipoP;
+    display: grid;
+    grid-row:auto;
+    align-items:center;
+    justify-items: center;
+}
+.section2{
+    grid-area: ContenidoP;
+    display: grid;
+    grid-row:auto;
+}
+.section3{
+    grid-area: InformacionP;
+    display: grid;
+    grid-row:auto;
+}
