@@ -26,25 +26,36 @@
 .header__img{
     display: flex;
     position: absolute;
-    top: 25vh;
-    left: 35vw;   
+    top: 37vh;
+    left: 17.5vw;   
+}
+@media(min-width:500px){
+    .header__img{
+        display: flex;
+        position: absolute;
+        top: 35vh;
+        left: 15vw;   
+    }
+    .carousel-item{
+        @include sizes(350px,350px);
+    }
+    .tamaño-imagen{
+        @include sizes(350px,350px)
+    }
 }
 @media(max-width:768px){
     .header__img{
         display: flex;
         position: absolute;
-        top: 37vh;
-        left: 10vw;   
+        top: 35vh;
+        left: 35vw;   
     }
-}
-.carousel-item{
-    @include sizes(400px,400px);
-}
-@media(min-width:768px){
     .carousel-item{
-        @include sizes(400px,400px);
+        @include sizes(400px,400px)
     }
-   
+    .tamaño-imagen{
+        @include sizes(400px,400px)
+    }
 }
 .header__general{
     display: flex;
