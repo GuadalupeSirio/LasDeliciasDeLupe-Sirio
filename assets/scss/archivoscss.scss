@@ -23,28 +23,40 @@
          @include sizes(100vw,100vh);
      }
 }
+/*Header Imagenes portada*/
 .header__img{
     display: flex;
     position: absolute;
-    top: 25vh;
-    left: 35vw;   
+    top: 37vh;
+    left: 17.5vw; 
 }
-@media(max-width:768px){
+@media(min-width:500px){
     .header__img{
         display: flex;
         position: absolute;
-        top: 37vh;
-        left: 10vw;   
+        top: 35vh;
+        left: 15vw;   
+    }
+    .carousel-item{
+        @include sizes(350px,350px);
+    }
+    .tamaño-imagen{
+        @include sizes(350px,350px)
     }
 }
-.carousel-item{
-    @include sizes(400px,400px);
-}
 @media(min-width:768px){
+    .header__img{
+        display: flex;
+        position: absolute;
+        top: 35vh;
+        left: 35vw;   
+    }
     .carousel-item{
         @include sizes(400px,400px);
     }
-   
+    .tamaño-imagen{
+        @include sizes(400px,400px)
+    }
 }
 .header__general{
     display: flex;
@@ -59,15 +71,20 @@
 .header__logo{
     @include sizes(100px,100px);
 }
-/*.navbar{
+.navbar{
     background-color: black;
     padding: 1rem 2rem;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.5rem;
-    
-}*/
-.nav-link{
-    color: white;
+}
+@media only screen and (min-width: 768px){
+    .navbar{
+        background-color: black;
+        padding: 1rem 2rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1.5rem; 
+        height: 20vh;
+    }
 }
 /*.nav-item:hover {
     background-color: white;
@@ -179,6 +196,11 @@ ul ul{
         color: rgb(275, 179, 23);
         font-size: 20px;
         
+ }
+ .footer{
+     position: absolute;
+     left: 0;
+     bottom: 0;
  }
  /*
  @media only screen and (min-width: 768px){
@@ -300,29 +322,46 @@ main > *{
     align-items: center;
 }
 .aside{
+    display: flex;
     grid-area: Productos;
     background-color: orange;
-    
+    height: 20vh;
+    width: 20vw;
+    font-size: 25px;
+    font-weight: bold;
+    left: 20px;
 }
 .article{
     grid-area: Contenido;
     background-color: orange;
+    height: 20vh;
+    width: 40vw;
+    font-size: 25px;
+    font-weight: bold;
 }
-.aside1{
+/*.aside1{
     grid-area: INutricional;
     background-color: orange;
-}
+} */
 .section1{
+    display: flex;
     grid-area: TipoP;
     display: grid;
     grid-row:auto;
     align-items:center;
     justify-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    width: 20vw;
+    left: 20px;
 }
 .section2{
     grid-area: ContenidoP;
     display: grid;
     grid-row:auto;
+    font-size: 20px;
+    font-weight: bold;
+    width: 40vw;
 }
 .section3{
     grid-area: InformacionP;
