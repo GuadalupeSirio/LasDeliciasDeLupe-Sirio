@@ -10,31 +10,33 @@
     @include sizes(100vw,100vh);
 }
 .Body__General{
-    margin:0;
+    margin: 0;
+    margin-bottom: 40px;
     padding: 0;
     background-image: url("../../img/Fondo\ BodyGeneral.jpg");
-    @include sizes(500px,500px);
+    @include sizes(100vw,150vh);
 }
-@media only screen and (min-width: 768px){
+/*@media only screen and (min-width: 768px){
      .Body__General{
          margin: 0;
          padding: 0;
          background-image: url("../../img/Fondo\ BodyGeneral.jpg");
          @include sizes(100vw,100vh);
      }
-}
-.header__img{
+}*/
+                                       /*CAROUSEL--PORTADA*/
+.carousel__portada{
     display: flex;
     position: absolute;
-    top: 37vh;
+    top: 40vh;
     left: 17.5vw;   
 }
 @media(min-width:500px){
-    .header__img{
+    .carousel__portada{
         display: flex;
         position: absolute;
-        top: 35vh;
-        left: 15vw;   
+        top: 37.5vh;
+        left: 17.5vw;   
     }
     .carousel-item{
         @include sizes(350px,350px);
@@ -44,7 +46,7 @@
     }
 }
 @media(min-width:768px){
-    .header__img{
+    .carousel__portada{
         display: flex;
         position: absolute;
         top: 35vh;
@@ -57,28 +59,7 @@
         @include sizes(400px,400px)
     }
 }
-.navbar-toggler{
-    background-color: black;
-    height: 40px;
-}
-.navbar{
-    background-color: black;
-    height: 60px;
-}
-@media(mix-width:500px){
-    .navbar{
-        background-color: black;
-        height: 60px;
-    }
-    .navbar-toggler{
-        background-color: black;
-        height: 40px;
- }
-.header__general{
-    display: flex;
-    height: 30vh;
-    
-}
+                                                 /*HEADER--NAV*/
 .no-gutters{
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -87,21 +68,16 @@
 .header__logo{
     @include sizes(100px,100px);
 }
-/*.navbar{
-    background-color: black;
-    padding: 1rem 2rem;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.5rem;
+.header__general{
+    display: flex;
+    height: 30vh;
     
-}*/
-.nav-link{
-    color: white;
 }
-/*.nav-item:hover {
-    background-color: white;
-    color: black !important;
-    border-radius: 2rem;
-}*/
+.navbar-nav{
+    font-size: 15px;
+    font-weight: bold;
+}
+                                              /*ESTILOS TEXTO*/
 .block__texto{
     font-weight: bold;
     font-style: italic;
@@ -137,7 +113,7 @@
     color: rgb(61, 35, 4);
     text-align: center;
 }
-
+                                                  /*FORMULARIO*/
 .estilo-form{
     border: 2px solid black;
     display: block;
@@ -145,17 +121,31 @@
     padding: 10px;
     margin: 10px;
 }
+.formulario{
+        display: flex;
+        position: relative;
+}
 #formulario{
     float: left;
-    @include sizes(100%,420px);
+    @include sizes(65vw,50vh);
 }
 
-@media only screen and (min-width: 768px){
+@media (min-width: 500px){
     .estilo-form{
-        width: fit-content;
+        width: 90%;
     }
 }
 
+@media (min-width: 768px){
+    .estilo-form{
+        width: 55%;
+    }
+    #formulario{
+        float: left;
+        @include sizes(50vw,50vh);
+    }
+}
+                                                 /*ESTILO LISTAS*/
 .ol li{
     list-style-type: upper-roman;
     color: rgb(25, 25, 114);
@@ -195,8 +185,14 @@ ul ul{
         display: block;
     }
 }    
-    /*FOOTER*/
- #footer__grad{
+                                                    /*FOOTER*/
+.footer__ubicacion{
+    display: flex;
+    position: relative;
+    bottom: 0;
+    @include sizes(100%,40px);   
+}
+#footer__grad{
         display: grid;
         position: relative;
         left: 0;
@@ -205,54 +201,87 @@ ul ul{
         @include sizes(500px,120px);
         align-items: center;
         color: rgb(275, 179, 23);
-        font-size: 20px;
-        
+        font-size: 15px;      
  }
- /*
- @media only screen and (min-width: 768px){
-     .gradfooter{
-        display: grid;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        background-image: linear-gradient(to right,black,rgb(180, 178, 178));
-        height: 140px;
-        align-items: center;
-        color: rgb(275, 179, 23);
-        font-size: 10px;
-     }
- }*/
-
  .footer__logoI{
     display: flex;
     position: absolute;
-    bottom: 20px;
-    right: 460px;
+    bottom: 53px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
 }
 .footer__logoW{
    display: flex;
    position: absolute;
-   bottom: 5px;
-   right: 520px;
+   bottom: 80px;
+   right: 8px;
+   height: 30px;
+   width: 25px;
 }
 .footer__logoF{
     display: flex;
     position: absolute;
     bottom: 20px;
-    right: 590px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
 }
-
 .col-12{
     display: flex;
     position: absolute;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;   
 }
-
-
-
-    /*  BOTONES FORMULARIO  */
+ @media (min-width: 500px){
+    #footer__grad{
+        @include sizes(600px,120px);
+        font-size: 17.5px;
+    }
+    .footer__logoI{
+        bottom: 40px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    .footer__logoW{
+       bottom: 20px;
+       right: 90px;
+       width: 60px;
+       height: 90px;
+    }
+    .footer__logoF{
+        bottom: 40px;
+        right: 165px;
+        width: 50px;
+        height: 50px;
+    }
+ }
+ @media (min-width: 768px){
+    .footer__logoI{
+        bottom: 40px;
+        right: 50px;
+        width: 50px;
+        height: 50px;
+    }
+    .footer__logoW{
+       bottom: 20px;
+       right: 125px;
+       width: 60px;
+       height: 90px;
+    }
+    .footer__logoF{
+        bottom: 40px;
+        right: 210px;
+        width: 50px;
+        height: 50px;
+    }
+    #footer__grad{
+        @include sizes(100vw,120px);
+        font-size: 20px; 
+    }
+ }
+                                             /*  BOTONES FORMULARIO  */
 .input:focus{
       background-color: rgb(275, 179, 23);
 }
@@ -262,7 +291,7 @@ ul ul{
 
 
 
-/*ESTILO                    PAGINA                  3*/
+                                              /*ESTILO PAGINA ADICIONALES--3*/
 .adicionales{
     display: grid;
     height: 90vh;
@@ -311,7 +340,7 @@ ul ul{
    }
 }
 
- /*Tabla pagina productos*/
+                                                /*ESTILO PAGINA PRODUCTOS--2*/
  .main{
     display: grid;
     font-family: sans-serif;
@@ -322,7 +351,7 @@ ul ul{
                          ;
 }
 main > *{
-    background-color: aqua;
+    background-color: rgb(247, 214, 126);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -356,4 +385,67 @@ main > *{
     grid-area: InformacionP;
     display: grid;
     grid-row:auto;
+}
+                                    /*ESTILO PAGINA NOSOTROS--4*/
+.nosotros__contenido{
+    display: grid;
+    grid-template-areas: "texto"
+                         "contenido";
+    
+}
+.texto__nosotros{
+    grid-area: texto;
+    display: grid;
+    grid-row: auto;
+    
+
+}
+.imagen_nosotros{
+    grid-area: imagen;
+    display: grid;
+    grid-row: auto;
+    width: 75px;
+    height: 140px;
+}
+@media (min-width: 500px){
+    .nosotros__contenido{
+        display: grid;
+        grid-template-areas: "texto contenido";
+        display: flex;
+        position: relative;
+    }
+    .texto__nosotros{
+        grid-area: texto;
+        display: grid;
+        grid-row: auto;
+        width: 65%;
+    }
+    .imagen__nosotros{
+        grid-area: imagen;
+        display: grid;
+        grid-row: auto;
+        width: 100px;
+        height: 163px;
+    }
+}
+@media (min-width: 768px){
+    .nosotros__contenido{
+        display: grid;
+        grid-template-areas: "texto contenido";
+        display: flex;
+        position: relative;
+    }
+    .texto__nosotros{
+        grid-area: texto;
+        display: grid;
+        grid-row: auto;
+        width: 50%;
+    }
+    .imagen__nosotros{
+        grid-area: imagen;
+        display: grid;
+        grid-row: auto;
+        width: 200;
+        height: 326;
+    }
 }

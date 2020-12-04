@@ -8,31 +8,33 @@
 
 .Body__General {
   margin: 0;
+  margin-bottom: 40px;
   padding: 0;
   background-image: url("../../img/Fondo BodyGeneral.jpg");
-  height: 500px;
-  width: 500px; }
+  height: 150vh;
+  width: 100vw; }
 
-@media only screen and (min-width: 768px) {
-  .Body__General {
-    margin: 0;
-    padding: 0;
-    background-image: url("../../img/Fondo BodyGeneral.jpg");
-    height: 100vh;
-    width: 100vw; } }
-
-.header__img {
+/*@media only screen and (min-width: 768px){
+     .Body__General{
+         margin: 0;
+         padding: 0;
+         background-image: url("../../img/Fondo\ BodyGeneral.jpg");
+         @include sizes(100vw,100vh);
+     }
+}*/
+/*CAROUSEL--PORTADA*/
+.carousel__portada {
   display: flex;
   position: absolute;
-  top: 37vh;
+  top: 40vh;
   left: 17.5vw; }
 
 @media (min-width: 500px) {
-  .header__img {
+  .carousel__portada {
     display: flex;
     position: absolute;
-    top: 35vh;
-    left: 15vw; }
+    top: 37.5vh;
+    left: 17.5vw; }
   .carousel-item {
     height: 350px;
     width: 350px; }
@@ -41,7 +43,7 @@
     width: 350px; } }
 
 @media (min-width: 768px) {
-  .header__img {
+  .carousel__portada {
     display: flex;
     position: absolute;
     top: 35vh;
@@ -53,19 +55,7 @@
     height: 400px;
     width: 400px; } }
 
-.navbar-toggler {
-  background-color: black;
-  height: 40px; }
-
-@media (max-width: 500px) {
-  .navbar {
-    background-color: black;
-    height: 60px; } }
-
-.header__general {
-  display: flex;
-  height: 30vh; }
-
+/*HEADER--NAV*/
 .no-gutters {
   padding-left: 0 !important;
   padding-right: 0 !important; }
@@ -74,21 +64,15 @@
   height: 100px;
   width: 100px; }
 
-/*.navbar{
-    background-color: black;
-    padding: 1rem 2rem;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.5rem;
-    
-}*/
-.nav-link {
-  color: white; }
+.header__general {
+  display: flex;
+  height: 30vh; }
 
-/*.nav-item:hover {
-    background-color: white;
-    color: black !important;
-    border-radius: 2rem;
-}*/
+.navbar-nav {
+  font-size: 15px;
+  font-weight: bold; }
+
+/*ESTILOS TEXTO*/
 .block__texto, .block__text1, .block__text4 {
   font-weight: bold;
   font-style: italic; }
@@ -119,6 +103,7 @@
   color: #3d2304;
   text-align: center; }
 
+/*FORMULARIO*/
 .estilo-form {
   border: 2px solid black;
   display: block;
@@ -126,15 +111,28 @@
   padding: 10px;
   margin: 10px; }
 
+.formulario {
+  display: flex;
+  position: relative; }
+
 #formulario {
   float: left;
-  height: 420px;
-  width: 100%; }
+  height: 50vh;
+  width: 65vw; }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 500px) {
   .estilo-form {
-    width: fit-content; } }
+    width: 90%; } }
 
+@media (min-width: 768px) {
+  .estilo-form {
+    width: 55%; }
+  #formulario {
+    float: left;
+    height: 50vh;
+    width: 50vw; } }
+
+/*ESTILO LISTAS*/
 .ol li {
   list-style-type: upper-roman;
   color: #191972;
@@ -172,6 +170,13 @@ ul ul {
     display: block; }
 
 /*FOOTER*/
+.footer__ubicacion {
+  display: flex;
+  position: relative;
+  bottom: 0;
+  height: 40px;
+  width: 100%; }
+
 #footer__grad {
   display: grid;
   position: relative;
@@ -182,52 +187,85 @@ ul ul {
   width: 500px;
   align-items: center;
   color: #ffb317;
-  font-size: 20px; }
+  font-size: 15px; }
 
-/*
- @media only screen and (min-width: 768px){
-     .gradfooter{
-        display: grid;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        background-image: linear-gradient(to right,black,rgb(180, 178, 178));
-        height: 140px;
-        align-items: center;
-        color: rgb(275, 179, 23);
-        font-size: 10px;
-     }
- }*/
 .footer__logoI {
   display: flex;
   position: absolute;
-  bottom: 20px;
-  right: 460px; }
+  bottom: 53px;
+  right: 10px;
+  height: 20px;
+  width: 20px; }
 
 .footer__logoW {
   display: flex;
   position: absolute;
-  bottom: 5px;
-  right: 520px; }
+  bottom: 80px;
+  right: 8px;
+  height: 30px;
+  width: 25px; }
 
 .footer__logoF {
   display: flex;
   position: absolute;
   bottom: 20px;
-  right: 590px; }
+  right: 10px;
+  height: 20px;
+  width: 20px; }
 
 .col-12 {
   display: flex;
   position: absolute;
-  align-items: center;
-  justify-content: center;
-  justify-items: center; }
+  align-items: flex-start;
+  justify-content: flex-start; }
+
+@media (min-width: 500px) {
+  #footer__grad {
+    height: 120px;
+    width: 600px;
+    font-size: 17.5px; }
+  .footer__logoI {
+    bottom: 40px;
+    right: 20px;
+    width: 50px;
+    height: 50px; }
+  .footer__logoW {
+    bottom: 20px;
+    right: 90px;
+    width: 60px;
+    height: 90px; }
+  .footer__logoF {
+    bottom: 40px;
+    right: 165px;
+    width: 50px;
+    height: 50px; } }
+
+@media (min-width: 768px) {
+  .footer__logoI {
+    bottom: 40px;
+    right: 50px;
+    width: 50px;
+    height: 50px; }
+  .footer__logoW {
+    bottom: 20px;
+    right: 125px;
+    width: 60px;
+    height: 90px; }
+  .footer__logoF {
+    bottom: 40px;
+    right: 210px;
+    width: 50px;
+    height: 50px; }
+  #footer__grad {
+    height: 120px;
+    width: 100vw;
+    font-size: 20px; } }
 
 /*  BOTONES FORMULARIO  */
 .input:focus {
   background-color: #ffb317; }
 
-/*ESTILO                    PAGINA                  3*/
+/*ESTILO PAGINA ADICIONALES--3*/
 .adicionales {
   display: grid;
   height: 90vh;
@@ -268,7 +306,7 @@ ul ul {
     height: 100px;
     width: 100px; } }
 
-/*Tabla pagina productos*/
+/*ESTILO PAGINA PRODUCTOS--2*/
 .main {
   display: grid;
   font-family: sans-serif;
@@ -310,3 +348,56 @@ main > * {
   grid-area: InformacionP;
   display: grid;
   grid-row: auto; }
+
+/*ESTILO PAGINA NOSOTROS--4*/
+.nosotros__contenido {
+  display: grid;
+  grid-template-areas: "texto" "contenido"; }
+
+.texto__nosotros {
+  grid-area: texto;
+  display: grid;
+  grid-row: auto; }
+
+.imagen_nosotros {
+  grid-area: imagen;
+  display: grid;
+  grid-row: auto;
+  width: 75px;
+  height: 140px; }
+
+@media (min-width: 500px) {
+  .nosotros__contenido {
+    display: grid;
+    grid-template-areas: "texto contenido";
+    display: flex;
+    position: relative; }
+  .texto__nosotros {
+    grid-area: texto;
+    display: grid;
+    grid-row: auto;
+    width: 65%; }
+  .imagen__nosotros {
+    grid-area: imagen;
+    display: grid;
+    grid-row: auto;
+    width: 100px;
+    height: 163px; } }
+
+@media (min-width: 768px) {
+  .nosotros__contenido {
+    display: grid;
+    grid-template-areas: "texto contenido";
+    display: flex;
+    position: relative; }
+  .texto__nosotros {
+    grid-area: texto;
+    display: grid;
+    grid-row: auto;
+    width: 50%; }
+  .imagen__nosotros {
+    grid-area: imagen;
+    display: grid;
+    grid-row: auto;
+    width: 200;
+    height: 326; } }
