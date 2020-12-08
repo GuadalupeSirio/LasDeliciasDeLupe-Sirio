@@ -27,7 +27,7 @@
                                        /*CAROUSEL--PORTADA*/
 .carousel__portada{
     display: flex;
-    position: absolute;
+    position: relative;
     top: 40vh;
     left: 17.5vw;   
 }
@@ -283,7 +283,7 @@ ul ul{
         font-size: 20px; 
     }
  }
-                                             /*BOTONES FORMULARIO */
+                                             /*  BOTONES FORMULARIO  */
 .input:focus{
       background-color: rgb(275, 179, 23);
 }
