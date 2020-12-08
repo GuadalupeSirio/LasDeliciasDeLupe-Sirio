@@ -16,41 +16,41 @@
     background-image: url("../../img/Fondo\ BodyGeneral.jpg");
     @include sizes(100vw,100vh);
 }
-/*@media only screen and (min-width: 768px){
-     .Body__General{
-         margin: 0;
-         padding: 0;
-         background-image: url("../../img/Fondo\ BodyGeneral.jpg");
-         @include sizes(100vw,100vh);
-     }
-}*/
                                        /*CAROUSEL--PORTADA*/
-.carousel__portada{
-    display: flex;
-    position: relative;
-    }
-    .carousel-item{
-        @include sizes(350px,350px);
-    }
-    .tamaño-imagen{
-        @include sizes(350px,350px);
-    }
-
-
-@media(min-width:768px){
-    .carousel__portada{
-        display: flex;
-        position: absolute;
-        top: 35vh;
-        left: 35vw;   
-    }
-    .carousel-item{
-        @include sizes(400px,400px);
-    }
-    .tamaño-imagen{
-        @include sizes(400px,400px);
-    }
+ .carousel__portada{
+            display: flex;
+            position: absolute;
+            top: 40vh;
+            left: 17.5vw;   
 }
+@media(min-width:500px){
+            .carousel__portada{
+                         display: flex;
+                         position: absolute;
+                         top: 37.5vh;
+                         left: 17.5vw;   
+                                }
+            .carousel-item{
+                         @include sizes(350px,350px);
+                          }
+             .tamaño-imagen{
+                         @include sizes(350px,350px)
+                          }
+}
+ @media(min-width:768px){
+             .carousel__portada{
+                         display: flex;
+                         position: absolute;
+                         top: 35vh;
+                         left: 35vw;   
+                                 }
+             .carousel-item{
+                         @include sizes(400px,400px)
+                             }
+             .tamaño-imagen{
+                         @include sizes(400px,400px)
+                             }
+ }
                                                  /*HEADER--NAV*/
 .no-gutters{
     padding-left: 0 !important;
