@@ -14,7 +14,7 @@
     margin-bottom: 40px;
     padding: 0;
     background-image: url("../../img/Fondo\ BodyGeneral.jpg");
-    @include sizes(100vw,150vh);
+    @include sizes(100vw,100vh);
 }
 /*@media only screen and (min-width: 768px){
      .Body__General{
@@ -124,6 +124,8 @@
 .formulario{
         display: flex;
         position: relative;
+        justify-content: center;
+        align-content: center;
 }
 #formulario{
     float: left;
@@ -192,13 +194,13 @@ ul ul{
     bottom: 0;
     @include sizes(100%,40px);   
 }
-#footer__grad{
+.footer__grad{
         display: grid;
         position: relative;
         left: 0;
         bottom: 0;
         background-image: linear-gradient(to right,black,rgb(180, 178, 178));
-        @include sizes(500px,120px);
+        @include sizes(100%,120px);
         align-items: center;
         color: rgb(275, 179, 23);
         font-size: 15px;      
@@ -344,7 +346,7 @@ ul ul{
  .main{
     display: grid;
     font-family: sans-serif;
-    height: 100vh;
+    
     grid-gap: 10px;
     grid-template-areas: "Productos Contenido INutricional"
                          "TipoP ContenidoP InformacionP"
@@ -406,6 +408,7 @@ main > *{
     grid-row: auto;
     width: 75px;
     height: 140px;
+    
 }
 @media (min-width: 500px){
     .nosotros__contenido{

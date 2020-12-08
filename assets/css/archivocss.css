@@ -11,7 +11,7 @@
   margin-bottom: 40px;
   padding: 0;
   background-image: url("../../img/Fondo BodyGeneral.jpg");
-  height: 150vh;
+  height: 100vh;
   width: 100vw; }
 
 /*@media only screen and (min-width: 768px){
@@ -113,7 +113,9 @@
 
 .formulario {
   display: flex;
-  position: relative; }
+  position: relative;
+  justify-content: center;
+  align-content: center; }
 
 #formulario {
   float: left;
@@ -177,14 +179,14 @@ ul ul {
   height: 40px;
   width: 100%; }
 
-#footer__grad {
+.footer__grad {
   display: grid;
   position: relative;
   left: 0;
   bottom: 0;
   background-image: linear-gradient(to right, black, #b4b2b2);
   height: 120px;
-  width: 500px;
+  width: 100%;
   align-items: center;
   color: #ffb317;
   font-size: 15px; }
@@ -310,12 +312,11 @@ ul ul {
 .main {
   display: grid;
   font-family: sans-serif;
-  height: 100vh;
   grid-gap: 10px;
   grid-template-areas: "Productos Contenido INutricional" "TipoP ContenidoP InformacionP"; }
 
 main > * {
-  background-color: aqua;
+  background-color: #f7d67e;
   display: flex;
   justify-content: center;
   align-items: center; }
