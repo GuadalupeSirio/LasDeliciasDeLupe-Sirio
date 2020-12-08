@@ -28,6 +28,7 @@
 .carousel__portada{
     display: flex;
     position: absolute;
+<<<<<<< HEAD
     top: 40vh;
     left: 17.5vw;   
 }
@@ -37,6 +38,17 @@
         position: absolute;
         top: 37.5vh;
         left: 17.5vw;   
+=======
+    top: 37vh;
+    left: 17.5vw;   
+}
+@media(min-width:500px){
+    .header__img{
+        display: flex;
+        position: absolute;
+        top: 35vh;
+        left: 15vw;   
+>>>>>>> a581295ddde3d6079d7bb1534a79883f392b91b6
     }
     .carousel-item{
         @include sizes(350px,350px);
@@ -45,8 +57,13 @@
         @include sizes(350px,350px)
     }
 }
+<<<<<<< HEAD
 @media(min-width:768px){
     .carousel__portada{
+=======
+@media(max-width:768px){
+    .header__img{
+>>>>>>> a581295ddde3d6079d7bb1534a79883f392b91b6
         display: flex;
         position: absolute;
         top: 35vh;
@@ -58,6 +75,14 @@
     .tamaño-imagen{
         @include sizes(400px,400px)
     }
+<<<<<<< HEAD
+=======
+}
+.header__general{
+    display: flex;
+    height: 30vh;
+    
+>>>>>>> a581295ddde3d6079d7bb1534a79883f392b91b6
 }
                                                  /*HEADER--NAV*/
 .no-gutters{
@@ -388,6 +413,7 @@ main > *{
     display: grid;
     grid-row:auto;
 }
+<<<<<<< HEAD
                                     /*ESTILO PAGINA NOSOTROS--4*/
 .nosotros__contenido{
     display: grid;
@@ -452,3 +478,5 @@ main > *{
         height: 326;
     }
 }
+=======
+>>>>>>> a581295ddde3d6079d7bb1534a79883f392b91b6
