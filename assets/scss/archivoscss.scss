@@ -35,7 +35,8 @@
     .tamaño-imagen{
         @include sizes(350px,350px);
     }
-}
+
+
 @media(min-width:768px){
     .carousel__portada{
         display: flex;
