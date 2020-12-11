@@ -132,11 +132,11 @@
 
 @media (min-width: 768px){
     .estilo-form{
-        width: 55%;
+        width: 50%;
     }
     #formulario{
         float: left;
-        @include sizes(50vw,50vh);
+        @include sizes(45vw,50vh);
     }
 }
                                                  /*ESTILO LISTAS*/
@@ -410,12 +410,17 @@ main > *{
         position: relative;
     }
     .texto__nosotros{
+        position: relative;
+        left: 20px;
         grid-area: texto;
         display: grid;
         grid-row: auto;
-        width: 65%;
+        width: 50%;
     }
     .imagen__nosotros{
+        position: absolute;
+        right: 125px;
+        top: 75px;
         grid-area: imagen;
         display: grid;
         grid-row: auto;
@@ -428,15 +433,21 @@ main > *{
         display: grid;
         grid-template-areas: "texto contenido";
         display: flex;
-        position: relative;
+        
     }
     .texto__nosotros{
+        position: relative;
+        top: 50px;
+        left: 200px;
         grid-area: texto;
         display: grid;
         grid-row: auto;
         width: 50%;
     }
     .imagen__nosotros{
+        position: absolute;
+        right: 300px;
+        top: 10px;
         grid-area: imagen;
         display: grid;
         grid-row: auto;

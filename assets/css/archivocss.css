@@ -120,11 +120,11 @@
 
 @media (min-width: 768px) {
   .estilo-form {
-    width: 55%; }
+    width: 50%; }
   #formulario {
     float: left;
     height: 50vh;
-    width: 50vw; } }
+    width: 45vw; } }
 
 /*ESTILO LISTAS*/
 .ol li {
@@ -366,11 +366,16 @@ main > * {
     display: flex;
     position: relative; }
   .texto__nosotros {
+    position: relative;
+    left: 20px;
     grid-area: texto;
     display: grid;
     grid-row: auto;
-    width: 65%; }
+    width: 50%; }
   .imagen__nosotros {
+    position: absolute;
+    right: 125px;
+    top: 75px;
     grid-area: imagen;
     display: grid;
     grid-row: auto;
@@ -381,14 +386,19 @@ main > * {
   .nosotros__contenido {
     display: grid;
     grid-template-areas: "texto contenido";
-    display: flex;
-    position: relative; }
+    display: flex; }
   .texto__nosotros {
+    position: relative;
+    top: 50px;
+    left: 200px;
     grid-area: texto;
     display: grid;
     grid-row: auto;
     width: 50%; }
   .imagen__nosotros {
+    position: absolute;
+    right: 300px;
+    top: 10px;
     grid-area: imagen;
     display: grid;
     grid-row: auto;
