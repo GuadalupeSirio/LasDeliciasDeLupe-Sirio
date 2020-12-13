@@ -10,13 +10,13 @@
     @include sizes(100vw,100vh);
 }
 .Body__General{
-    position: sticky;
     margin: 0;
     margin-bottom: 40px;
     padding: 0;
     background-image: url("../../img/Fondo\ BodyGeneral.jpg");
     @include sizes(100vw,100vh);
 }
+
                                        /*CAROUSEL--PORTADA*/
  .carousel__portada{
             display: flex;
@@ -287,6 +287,12 @@ ul ul{
 
 
                                               /*ESTILO PAGINA ADICIONALES--3*/
+.adicionales__contenedor{
+    position: relative;
+    width: 100vw;
+
+}
+
 .adicionales{
     display: grid;
     height: 90vh;
@@ -298,30 +304,41 @@ ul ul{
     align-items: center;
  }
  .descripcion{
+     position: relative;
+     justify-items: normal;
+     left: 10%;
+     top: 80px;
      grid-column: 1/3;
      color: rgb(25, 25, 114);
      font-family: 'Comfortaa', cursive;
      font-weight: bold;
  }
+ #checkbox{
+    grid-column: 2/3;
+    position: relative;
+    left: 115%;
+    top: 35px;
+}
  .imagen{
+     position: relative;
+     left: -30%;
      grid-column: 3/3;
-     @include sizes(30px,30px);
+     @include sizes(30px, 30px);
      animation-name: imagen;
      animation-duration: 2s;
          
  }
- 
- #checkbox{
-    grid-column: 2/3;
-}
-
-
  #comentario{
+     width: 100vw;
+     position: relative;
      display:grid;
-     bottom: 10%;
-     left: 50px;
+     bottom: -20px;
+     left: 20px;
+     
  }
-
+.block__text3{
+    font-size: 12.5px;
+}
 
   @keyframes imagen{
    from{
@@ -331,7 +348,60 @@ ul ul{
      @include sizes(100px,100px);
    }
 }
-
+@media (min-width: 540px){
+    .descripcion{
+        left: 10%;
+        top: 70px;
+     }
+     #checkbox{
+        left: 110%;
+        top: 15px;
+     }
+     .imagen{
+        left: -30%;
+        @include sizes(35px, 35px);
+    }
+    #comentario{
+        bottom: -20px;
+        left: 10px;
+    }
+    .block__text3{
+        font-size: 17.5px;
+    }
+}
+@media (min-width: 720px){
+     .descripcion{
+         position: relative;
+         justify-items: normal;
+         left: 35%;
+         top: 60px;
+         grid-column: 1/3;
+         color: rgb(25, 25, 114);
+         font-family: 'Comfortaa', cursive;
+         font-weight: bold;
+     }
+     #checkbox{
+        grid-column: 2/3;
+        position: relative;
+        left: 110%;
+        top: 15px;
+    }
+     .imagen{
+         position: relative;
+         left: -30%;
+         grid-column: 3/3;
+         @include sizes(40px, 40px);
+         animation-name: imagen;
+         animation-duration: 2s;
+             
+     }
+    #comentario{
+        position: relative;
+        display:grid;
+        bottom: -20px;
+        left: 30%;
+    }
+}
                                                 /*ESTILO PAGINA PRODUCTOS--2*/
  .main{
     display: grid;
@@ -452,6 +522,7 @@ main > *{
 @media (min-width: 768px){
     .nosotros__contenido{
         display: grid;
+        margin-bottom: 200px;
         grid-template-areas: "texto contenido";
         display: flex;
         
