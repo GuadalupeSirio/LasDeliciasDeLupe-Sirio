@@ -10,6 +10,7 @@
     @include sizes(100vw,100vh);
 }
 .Body__General{
+    position: sticky;
     margin: 0;
     margin-bottom: 40px;
     padding: 0;
@@ -124,7 +125,7 @@
     @include sizes(65vw,50vh);
 }
 
-@media (min-width: 500px){
+@media (min-width: 540px){
     .estilo-form{
         width: 90%;
     }
@@ -183,17 +184,17 @@ ul ul{
 .footer__ubicacion{
     display: flex;
     position: relative;
+    margin-top: 100px;
     bottom: 0;
     @include sizes(100%,40px);   
 }
 .footer__grad{
         display: grid;
-        position: relative;
+        position: absolute;
         left: 0;
         bottom: 0;
         background-image: linear-gradient(to right,black,rgb(180, 178, 178));
         @include sizes(100%,120px);
-        align-items: center;
         color: rgb(275, 179, 23);
         font-size: 15px;      
  }
@@ -224,10 +225,10 @@ ul ul{
 .col-12{
     display: flex;
     position: absolute;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;   
 }
- @media (min-width: 500px){
+ @media (min-width: 540px){
     #footer__grad{
         @include sizes(600px,120px);
         font-size: 17.5px;
@@ -379,6 +380,9 @@ main > *{
 }
                                     /*ESTILO PAGINA NOSOTROS--4*/
 .nosotros__contenido{
+    position: relative;
+    width: 80vw;
+    height: 800px;
     display: grid;
     grid-template-areas: "texto"
                          "contenido";
@@ -388,25 +392,33 @@ main > *{
     grid-area: texto;
     display: grid;
     grid-row: auto;
-    
-    
-
+    position: absolute;
+    left: 30px;
 }
+.div_contenedor--img{
+    position: relative;
+    top: 500px;
+    left: 70px;
+}
+
 .imagen_nosotros{
     grid-area: imagen;
     display: grid;
     grid-row: auto;
     width: 75px;
     height: 140px;
+    position: absolute;
+    top: 100px;
     
     
 }
-@media (min-width: 500px){
+@media (min-width: 540px){
     .nosotros__contenido{
         display: grid;
         grid-template-areas: "texto contenido";
         display: flex;
         position: relative;
+        height: auto;
     }
     .texto__nosotros{
         position: relative;
@@ -415,6 +427,16 @@ main > *{
         display: grid;
         grid-row: auto;
         width: 50%;
+    }
+    .div_contenedor--img{
+        position: relative;
+        top: 30px;
+        left: 70%;
+    }
+    .div_contenedor--img{
+        position: relative;
+        top: 30px;
+        right: 0;
     }
     .imagen__nosotros{
         position: absolute;
@@ -442,6 +464,11 @@ main > *{
         display: grid;
         grid-row: auto;
         width: 50%;
+    }
+    .div_contenedor--img{
+        position: relative;
+        top: 30px;
+        left: 70%;
     }
     .imagen__nosotros{
         position: absolute;
