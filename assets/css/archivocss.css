@@ -417,7 +417,7 @@ main > * {
 @media (min-width: 540px) {
   .div__productos {
     position: relative;
-    margin-left: 10px;
+    margin-left: 30px;
     margin-right: 30px; } }
 
 @media (min-width: 740px) {
