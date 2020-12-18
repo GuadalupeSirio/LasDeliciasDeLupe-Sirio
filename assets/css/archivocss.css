@@ -365,6 +365,11 @@ ul ul {
     left: 30%; } }
 
 /*ESTILO PAGINA PRODUCTOS--2*/
+.div__productos {
+  position: relative;
+  margin-left: 80px;
+  margin-right: 80px; }
+
 .main {
   display: grid;
   font-family: sans-serif;

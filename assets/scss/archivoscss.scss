@@ -404,7 +404,12 @@ ul ul{
     }
 }
                                                 /*ESTILO PAGINA PRODUCTOS--2*/
- .main{
+    .div__productos{
+        position: relative;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    .main{
     display: grid;
     font-family: sans-serif;
     font-weight: bold;
