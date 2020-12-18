@@ -261,10 +261,11 @@ ul ul {
 
 /*ESTILO PAGINA ADICIONALES--3*/
 .adicionales__contenedor {
-  position: relative;
-  width: 100vw; }
+  position: relative; }
 
 .adicionales {
+  position: relative;
+  margin-bottom: 60px;
   display: grid;
   height: 90vh;
   grid-template-columns: 40% 5% 55%;
@@ -301,7 +302,7 @@ ul ul {
   animation-duration: 2s; }
 
 #comentario {
-  width: 100vw;
+  width: 90vw;
   position: relative;
   display: grid;
   bottom: -20px;
@@ -315,8 +316,8 @@ ul ul {
     height: 30px;
     width: 30px; }
   to {
-    height: 100px;
-    width: 100px; } }
+    height: 65px;
+    width: 65px; } }
 
 @media (min-width: 540px) {
   .descripcion {
@@ -367,8 +368,8 @@ ul ul {
 /*ESTILO PAGINA PRODUCTOS--2*/
 .div__productos {
   position: relative;
-  margin-left: 80px;
-  margin-right: 80px; }
+  margin-left: 10px;
+  margin-right: 30px; }
 
 .main {
   display: grid;
@@ -413,10 +414,22 @@ main > * {
   display: grid;
   grid-row: auto; }
 
+@media (min-width: 540px) {
+  .div__productos {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 30px; } }
+
+@media (min-width: 740px) {
+  .div__productos {
+    position: relative;
+    margin-left: 30px;
+    margin-right: 40px; } }
+
 /*ESTILO PAGINA NOSOTROS--4*/
 .nosotros__contenido {
   position: relative;
-  width: 80vw;
+  width: 70vw;
   height: 500px;
   display: grid;
   grid-template-areas: "texto" "contenido"; }
@@ -426,12 +439,12 @@ main > * {
   display: grid;
   grid-row: auto;
   position: absolute;
-  left: 40px; }
+  left: 70px; }
 
 .div_contenedor--img {
   position: relative;
   top: 300px;
-  left: 80px; }
+  left: 85px; }
 
 .imagen_nosotros {
   grid-area: imagen;
@@ -451,7 +464,7 @@ main > * {
     height: auto; }
   .texto__nosotros {
     position: relative;
-    left: 20px;
+    left: 40px;
     grid-area: texto;
     display: grid;
     grid-row: auto;
@@ -459,7 +472,7 @@ main > * {
   .div_contenedor--img {
     position: relative;
     top: 30px;
-    left: 70%; }
+    left: 90%; }
   .div_contenedor--img {
     position: relative;
     top: 30px;
