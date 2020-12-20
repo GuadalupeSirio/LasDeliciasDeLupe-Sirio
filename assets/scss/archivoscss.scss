@@ -287,6 +287,7 @@ ul ul{
 
 
                                               /*ESTILO PAGINA ADICIONALES--3*/
+
 .adicionales__contenedor{
     position: relative;
 }
@@ -349,7 +350,7 @@ ul ul{
      @include sizes(65px,65px);
    }
 }
-@media (min-width: 540px){
+/*@media (min-width: 540px){
     .descripcion{
         left: 10%;
         top: 70px;
@@ -369,7 +370,7 @@ ul ul{
     .block__text3{
         font-size: 17.5px;
     }
-}
+}*/
 @media (min-width: 768px){
      .descripcion{
          position: relative;
@@ -398,11 +399,12 @@ ul ul{
      }
     #comentario{
         position: relative;
-        display:grid;
+        display: flex;
+        justify-content: center;
         bottom: -20px;
-        left: 30%;
+        
     }
-}
+} 
                                                 /*ESTILO PAGINA PRODUCTOS--2*/
     .div__productos{
         position: relative;
