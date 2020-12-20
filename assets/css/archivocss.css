@@ -319,27 +319,23 @@ ul ul {
     height: 65px;
     width: 65px; } }
 
-/*@media (min-width: 540px){
-    .descripcion{
-        left: 10%;
-        top: 70px;
-     }
-     #checkbox{
-        left: 110%;
-        top: 15px;
-     }
-     .imagen{
-        left: -30%;
-        @include sizes(35px, 35px);
-    }
-    #comentario{
-        bottom: -20px;
-        left: 10px;
-    }
-    .block__text3{
-        font-size: 17.5px;
-    }
-}*/
+@media (min-width: 540px) {
+  .descripcion {
+    left: 10%;
+    top: 70px; }
+  #checkbox {
+    left: 110%;
+    top: 15px; }
+  .imagen {
+    left: -30%;
+    height: 35px;
+    width: 35px; }
+  #comentario {
+    bottom: -20px;
+    left: 10px; }
+  .block__text3 {
+    font-size: 17.5px; } }
+
 @media (min-width: 768px) {
   .descripcion {
     position: relative;

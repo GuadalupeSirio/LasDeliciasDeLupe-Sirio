@@ -350,7 +350,7 @@ ul ul{
      @include sizes(65px,65px);
    }
 }
-/*@media (min-width: 540px){
+@media (min-width: 540px){
     .descripcion{
         left: 10%;
         top: 70px;
@@ -370,7 +370,7 @@ ul ul{
     .block__text3{
         font-size: 17.5px;
     }
-}*/
+}
 @media (min-width: 768px){
      .descripcion{
          position: relative;
